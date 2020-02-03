@@ -5,12 +5,12 @@ import (
 	"os"
 )
 
-//SendDebugMessage Verify a Env Variable, if true, send  a debug message.
+//SendDebugMessage Verify a Env Variable (DEBUG), if true, send a debug message.
 func SendDebugMessage(msg string) {
 
-	isDebugEnableed := getEnv("DEBUG", "false")
+	isDebugEnabled := getEnv("DEBUG", "false")
 
-	if isDebugEnableed == "true" {
+	if isDebugEnabled == "true" {
 
 		log.Println(msg)
 
